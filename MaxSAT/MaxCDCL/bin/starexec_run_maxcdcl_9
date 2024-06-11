@@ -1,0 +1,14 @@
+#!/bin/bash
+wl=18000
+mem=32768
+
+echo "c [5gon] -- begin -- [5gon]"
+./run --timestamp -d 10 -o output.out -v output.var -w output.wat -C $wl -W $wl -M $mem ./maxcdcl_static $1 2
+cat output.out
+cat output.var
+rm -f output.out
+rm -f output.var
+echo "c [5gon] -- end -- [5gon]"
+
+
+
